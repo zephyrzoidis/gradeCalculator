@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"-->
+            <!--integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Grade Calculator by Zephyr Z</title>
+</head>
+<div class="p-3 mb-2 bg-light w3-text-black mx-auto col px-md-5">
+    <body>
+    <h1 class="text-uppercase">Grade Calculator</h1>
+
+    <p><em>
+        <h2 class = "text-muted">Separate scores with a comma. A= light green | B= teal | C= yellow | D= Orange | F= Red</h2>
+    </em></p>
+
+    <div id="wrapper">
+    <table class="table table-striped table-bordered table-hover table-lg">
+        <thead class="thead-dark">
+        <tr>
+            <th>Category</th>
+            <th>Grade</th>
+            <th>Weight</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id = "1">
+            <td>Homework</td>
+            <td><input type= "text" id = "hwGrade" value = "85, 80, 79"></td>
+            <td><input type= "text" id = "hwWeight" value = "20"></td>
+        </tr>
+        <tr id = "2">
+            <td>Classwork</td>
+            <td><input type= "text" id = "cwGrade" value = "94, 100, 92"></td>
+            <td><input type= "text" id = "cwWeight" value = "20"></td>
+        </tr>
+        <tr id = "3">
+            <td>Tests</td>
+            <td><input type= "text" id = "testGrade" value = "70, 65, 70"></td>
+            <td><input type= "text" id = "testWeight" value = "20"></td>
+        </tr>
+        <tr id = "4">
+            <td>Participation</td>
+            <td><input type= "text" id = "participationGrade" value = "55, 58, 60"></td>
+            <td><input type= "text" id = "participationWeight" value = "10"></td>
+        </tr>
+        <tr id = "5">
+            <td>Projects</td>
+            <td><input type= "text" id = "projectGrade" value = "85, 90, 75"></td>
+            <td><input type= "text" id = "projectWeight" value = "10"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-striped table-bordered table-hover table-lg">
+        <thead class="thead-dark">
+        <tr>
+            <th>Desired Grade in Class</th>
+            <th>Weight(%) of Final</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input type=text id="desiredGrade" placeholder="Desired Grade" value = "80"></td>
+            <td><input type=text id="finalWeight" placeholder="Enter Weight" value = "20"></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+
+    <button class="btn btn-primary btn-block" onclick="getCurrentGrade()">Current Grade</button>
+    <div id="getCurrentGrade"></div>
+    <button class="btn btn-success btn-block" onclick="finalGradeNeeded()">Final Grade Needed</button>
+    <div id="finalGradeNeeded"></div>
+    <button class="btn btn-secondary btn-block" onclick="resetPage()">Reset Page!</button>
+    </div>
+</div>
+</body>
+</html>
